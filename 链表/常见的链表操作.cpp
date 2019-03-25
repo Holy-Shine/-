@@ -72,13 +72,31 @@ void printList(ListNode *phead){
     cout<<endl;
 }
 
+/*****************************************************
+ *func:单链表反转
+ ***************************************************/
+void reverseList(ListNode **phead)
+{
+    if(phead==NULL||*phead==NULL)
+        return;
+    ListNode *p = NULL, *q = *phead;  // 指向头节点
+    while(q!=NULL){
+        ListNode *temp = q->next;
+        q->next = p;
+        p = q;
+        q = temp;
+    }
+    *phead = p;
+}
+
 int main(){
     ListNode *phead = NULL;
     addToTail(&phead,1);
     addToTail(&phead,2);
     addToTail(&phead,3);
     printList(phead);
-    RemoveNode(&phead,2);
+    reverseList(&phead);
+    reverseList(&phead);
     printList(phead);
     return 0;
 }
