@@ -1,3 +1,6 @@
+作业部落地址
+> [SVM知识梳理](https://www.zybuluo.com/HolyShine/note/1525480)
+
 ## 1. 硬间隔SVM
 
 首先回顾下我们的老朋友分类超平面：
